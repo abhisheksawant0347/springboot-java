@@ -26,17 +26,17 @@ jobs:
              - run: echo "Build Succesfully..."
    
     
-               - name: Building the Dockerfile
+           #  - name: Building the Dockerfile
              # needs: build-java
               #runs-on: ubuntu-latest
               #steps:
-                - uses: actions/checkout@v3
+  #          - uses: actions/checkout@v3
         
-                - name: Login into Dockerhub1
-                  env:
+             - name: Login into Dockerhub1
+               env:
                    DOCKER_USER: ${{secrets.DOCKERHUB_USERNAME}}
                    DOCKER_PASS: ${{secrets.DOCKERHUB_TOKEN }}
-                  run: | 
+               run: | 
                      docker login -u $DOCKER_USER -p $DOCKER_PASS 
                
                 # - name: Download Artifact
@@ -45,9 +45,9 @@ jobs:
                 #      name: final-build
                 #      path: artifacts/
                 #      run: echo "----Downloaded succesfully-----"
-                - name: Build the Docker image
-                  run: docker build -t ${{secrets.DOCKERHUB_USERNAME}}/spring-boot-docker.jar -f  Dockerfile . 
+             - name: Build the Docker image
+               run: docker build -t ${{secrets.DOCKERHUB_USERNAME}}/spring-boot-docker.jar -f  Dockerfile . 
                  # working-directory: artifacts
           
-                - name: Push the Docker Image
-                  run: docker push ${{secrets.DOCKERHUB_USERNAME}}/spring-boot-docker.jar 
+             - name: Push the Docker Image
+               run: docker push ${{secrets.DOCKERHUB_USERNAME}}/spring-boot-docker.jar 
