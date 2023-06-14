@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: my-application
-        image: nginx:latest
+        image: gcr.io/cicd-gke-388407/springboot-app:latest
         ports:
         - containerPort: 80    
 ---
