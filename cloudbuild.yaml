@@ -13,7 +13,7 @@ steps:
     - run
     - --filename=src/deployment.yaml
     - --image=gcr.io/cicd-gke-388407/springboot-app:latest
-    - --location=us-central1
-    - --cluster=app-cluster1
+    - --location=us-east1 
+    - --cluster=app-cluster2
 options:
    logging: CLOUD_LOGGING_ONLY
