@@ -12,7 +12,7 @@ steps:
     args:
     - run
     - --filename=src/deployment.yaml
-    - --image= gcr.io/$PROJECT_ID/$_SERVICE_NAME:$SHORT_SHA
+    - --image= gcr.io/cicd-gke-388407/springboot-app:latest
     - --location=us-central1
     - --cluster=app-cluster1
 options:
