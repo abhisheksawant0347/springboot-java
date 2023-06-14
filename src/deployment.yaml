@@ -31,6 +31,6 @@ spec:
   selector:
     app: my-app1
   ports:
-  - port: 8080
+  - port: 8081
     targetPort: 30000
   type: LoadBalancer
