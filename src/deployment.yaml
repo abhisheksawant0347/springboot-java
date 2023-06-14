@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment-three
+  name: my-app-deployment-one
   labels:
-    app: my-app1
+    app: my-app-one
 spec:
   selector:
     matchLabels:
-      app: my-app1
+      app: my-app-one
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-app1
+        app: my-app-one
     spec:
       containers:
       - name: my-application
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: my-service-three
+ name: my-service-one
  labels:
-   app: my-app1
+   app: my-app-one
 spec:
   selector:
-    app: my-app1
+    app: my-app-one
   ports:
     - port: 8082
       targetPort: 8082
