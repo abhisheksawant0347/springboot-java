@@ -11,7 +11,7 @@ steps:
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
     - run
-    - --filename=src/deployment.yml
+    - --filename=src/deployment.yaml
     - --image=gcr.io/cicd-gke-388407/springboot-app:latest
     - --location=us-central1
     - --cluster=app-cluster1
