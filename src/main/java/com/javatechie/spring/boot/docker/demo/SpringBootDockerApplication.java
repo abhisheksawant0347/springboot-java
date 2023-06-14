@@ -11,7 +11,7 @@ public class SpringBootDockerApplication {
 
 	@GetMapping("/message")
 	public String getMessage() {
-		return "Welcome to Rohan..";
+		return "Welcome. This is Cloud Build and Cloud run deployment";
 	}
 
 	public static void main(String[] args) {
