@@ -1,0 +1,17 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "master" ]
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: This is test github action
+      run: ls -la
+    
+       
+
