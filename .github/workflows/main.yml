@@ -1,6 +1,6 @@
 name: Building the Java project
 #on: [workflow_dispatch]
-on: [push,workflow_dispatch]
+#on: [push,workflow_dispatch]
 jobs: 
     build-java: 
           runs-on: ubuntu-latest
